@@ -1,3 +1,3 @@
 git add --all
-git commit -m "create git repository"
+git commit -m "collect top 100 song infos with selenium"
 git push origin master
