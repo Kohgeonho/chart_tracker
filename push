@@ -1,3 +1,3 @@
 git add --all
-git commit -m "create instance"
+git commit -m "crawling genie chart at server"
 git push origin master
