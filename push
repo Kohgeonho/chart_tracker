@@ -1,3 +1,3 @@
 git add --all
-git commit -m "sojeong's bruteforce"
+git commit -m "geonho's pretty coding"
 git push origin master
