@@ -1,3 +1,3 @@
 git add --all
-git commit -m "geonho's pretty coding"
+git commit -m "create musician and album class"
 git push origin master
