@@ -9,17 +9,28 @@ from pytz import timezone
 import pandas as pd
 from tqdm import tqdm
 
-display = Display(visible=0,size=(1024, 768))
-display.start()
+display = None
+driver = None
 
-driver = webdriver.Chrome('/home/ubuntu/chromedriver')
+def driver_init():
+    global display
+    global driver
+    
+    display = Display(visible=0,size=(1024, 768))
+    display.start()
+
+    driver = webdriver.Chrome('/home/ubuntu/chromedriver')
+    
+def driver_quit():  
+    driver.quit()
+    display.stop()
 
 def get_table():
-    
+        
     def find_id(element):
         return str(element)[25:33]
     
-    def chart(n):
+    def chart(n):        
         driver.get(f'https://www.genie.co.kr/chart/top200?pg={n}')
         page = driver.page_source
         soup = BeautifulSoup(page, 'lxml')
@@ -33,7 +44,7 @@ def get_table():
 
 
 class song_page():
-    
+        
     def __init__(self, id, rank):
         self.id = id
         self.rank = rank

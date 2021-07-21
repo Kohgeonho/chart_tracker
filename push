@@ -1,3 +1,3 @@
 git add --all
-git commit -m "save crawled data to SQL server"
+git commit -m "repeat.py : repeat once an hour"
 git push origin master
